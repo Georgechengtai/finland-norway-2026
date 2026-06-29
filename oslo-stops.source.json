@@ -1,0 +1,162 @@
+{
+  "_comment": "STAGING SOURCE — Oslo Day 1/2 stops with researched 2026 opening hours and open/closed logic. NOT deployed (see .assetsignore). To be merged into the encrypted map once the trip password is available. Coordinates are approximate landmark centroids; verify before final render. Hours researched 2026-06-29.",
+  "city": "Oslo",
+  "openClosedLogic": "A stop is OPEN now if (a) alwaysOpen=true, OR (b) today's weekday falls in openDays AND current time is within hours for that day AND (season==null OR today within season). Stops with bookingRequired or seasonal interiors should render an info badge even when grounds are open.",
+  "days": [
+    {
+      "day": 1,
+      "stops": [
+        {
+          "n": 1, "slot": "morning", "name": "Karl Johans gate", "category": "street",
+          "lat": 59.9145, "lng": 10.7372,
+          "alwaysOpen": true, "hours": "Public boulevard, 24/7", "free": true,
+          "note": "Main pedestrian artery linking Central Station to the Palace; shops typically 10:00–18:00.",
+          "source": "https://www.visitoslo.com/"
+        },
+        {
+          "n": 2, "slot": "morning", "name": "Oslo Royal Palace (Det kongelige slott)", "category": "landmark",
+          "lat": 59.9170, "lng": 10.7277,
+          "alwaysOpen": false, "groundsAlwaysOpen": true,
+          "season": {"from": "2026-06-20", "to": "2026-08-16"},
+          "openDays": ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"], "hours": "Interior guided tours 10:00–17:00 (season only)",
+          "bookingRequired": true,
+          "note": "Park always open & free. Interior = pre-booked guided tours via Ticketmaster, 20 Jun–16 Aug 2026 only (sells out). Changing of the Guard daily 13:30.",
+          "source": "https://www.royalcourt.no/visits-and-cultural-activities/visit-the-royal-palace/guided-tours-of-the-royal-palace"
+        },
+        {
+          "n": 3, "slot": "morning", "name": "Oslo Rådhus (City Hall)", "category": "landmark",
+          "lat": 59.9116, "lng": 10.7335,
+          "alwaysOpen": false, "openDays": ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+          "hours": "09:00–16:00 daily", "free": true,
+          "note": "Free entry; airport-style security. Can close for events (e.g. ~10 Dec Nobel Prize).",
+          "source": "https://www.oslo.kommune.no/english/oslo-city-hall/opening-hours/"
+        },
+        {
+          "n": 4, "slot": "morning", "name": "Nobels Fredssenter (Nobel Peace Center)", "category": "museum",
+          "lat": 59.9114, "lng": 10.7320,
+          "alwaysOpen": false, "openDays": ["Tue","Wed","Thu","Fri","Sat","Sun"], "closedDays": ["Mon"],
+          "hours": "Mid-Jun–Aug: daily 10:00–17:00 | Jan–mid-Jun: Tue & Thu–Sun 11:00–17:00, Wed 11:00–21:00",
+          "warning": "CLOSED MONDAYS (year-round outside peak). Confirm if Day 1 is a Monday.",
+          "source": "https://www.nobelpeacecenter.org/en/visit/opening-hours"
+        },
+        {
+          "n": 5, "slot": "morning", "name": "Nasjonalmuseet (National Museum)", "category": "museum",
+          "lat": 59.9105, "lng": 10.7305,
+          "alwaysOpen": false, "openDays": ["Tue","Wed","Thu","Fri","Sat","Sun"], "closedDays": ["Mon"],
+          "hours": "Tue–Sun 10:00–18:00, Thu 10:00–20:00",
+          "warning": "CLOSED MONDAYS. Large museum — allow 2–3 hrs.",
+          "source": "https://www.nasjonalmuseet.no/en/visit/locations/the-national-museum/"
+        },
+        {
+          "n": 6, "slot": "lunch+afternoon", "name": "Aker Brygge", "category": "waterfront",
+          "lat": 59.9095, "lng": 10.7280,
+          "alwaysOpen": true, "hours": "Public waterfront promenade 24/7; restaurants ~11:00–23:00",
+          "note": "Lunch + afternoon stroll. Seaport dinner options here & at Tjuvholmen next door.",
+          "source": "https://www.visitoslo.com/"
+        },
+        {
+          "n": 7, "slot": "afternoon", "name": "Akershus Festning (Fortress)", "category": "landmark",
+          "lat": 59.9075, "lng": 10.7365,
+          "alwaysOpen": false, "openDays": ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+          "hours": "Grounds daily 06:00–21:00", "free": true,
+          "note": "Grounds free & open daily. Castle interior + Resistance Museum have shorter, restricted hours.",
+          "source": "https://whichmuseum.com/museum/akershus-fortress-oslo-25133/opening-hours"
+        },
+        {
+          "n": 8, "slot": "afternoon/night", "name": "Munchmuseet (MUNCH)", "category": "museum",
+          "lat": 59.9060, "lng": 10.7560,
+          "alwaysOpen": false, "openDays": ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+          "hours": "Mon–Tue 10:00–18:00, Wed–Sun 10:00–21:00", "closedDates": ["05-01"],
+          "note": "Open daily (exc. 1 May). Best EVENING stop — open to 21:00 Wed–Sun. The '+/-' optional item; recommend prioritising over Opera foyer for the night slot.",
+          "source": "https://www.munch.no/en/visit-us/opening-hours/"
+        },
+        {
+          "n": 9, "slot": "night", "name": "Oslo Opera House (Operahuset)", "category": "landmark",
+          "lat": 59.9075, "lng": 10.7530,
+          "alwaysOpen": false, "roofAlwaysOpen": true,
+          "openDays": ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+          "hours": "Foyer Mon–Sat 11:00–16:00, Sun 12:00–16:00; roof/exterior walkable 24/7",
+          "note": "Reopened after maintenance 15 Jan 2026. Foyer closes 16:00 — by 'night' only the roof walk is available (still worth it).",
+          "source": "https://www.operaen.no/en/your-visit-at-oslo-operahouse/practical-information/"
+        },
+        {
+          "n": 10, "slot": "night", "name": "Deichman Bjørvika (Public Library)", "category": "landmark",
+          "lat": 59.9095, "lng": 10.7515,
+          "alwaysOpen": false, "openDays": ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+          "hours": "~10:00–22:00 daily (staffed); registered users 07:00–22:00",
+          "note": "Striking architecture, open late — good evening stop near the Opera.",
+          "source": "https://deichman.no/in-english"
+        },
+        {
+          "slot": "dinner", "name": "Seaport dinner", "category": "food",
+          "lat": 59.9095, "lng": 10.7280,
+          "note": "Options: Aker Brygge / Tjuvholmen, Vippetangen, or Barcode (Bjørvika) near Opera.",
+          "source": ""
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "stops": [
+        {
+          "slot": "morning", "name": "Bygdøy ferry (B9)", "category": "transport",
+          "lat": 59.9100, "lng": 10.7320,
+          "alwaysOpen": false, "season": {"from": "2026-04-01", "to": "2026-10-31"},
+          "openDays": ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+          "hours": "Mon–Fri ~09:00–16:00, Sat–Sun ~10:00–15:00, every ~20 min",
+          "note": "From Rådhusbrygge 3 (by City Hall) to Bygdøy museums. SEASONAL Apr–Oct only. Covered by Ruter ticket / boat ticket.",
+          "source": "https://ruter.no/en/planlegg-reise/rutetabeller-og-linjekart/ferry"
+        },
+        {
+          "n": 11, "slot": "morning", "name": "Norsk Folkemuseum", "category": "museum",
+          "lat": 59.9075, "lng": 10.6855,
+          "alwaysOpen": false, "openDays": ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+          "hours": "May–Sep: daily 10:00–17:00 | Oct–Apr: Tue–Sun 11:00–16:00 (closed Mon)",
+          "note": "Open-air folk museum. In summer open daily incl. Mondays.",
+          "source": "https://norskfolkemuseum.no/en/plan-your-visit"
+        },
+        {
+          "n": 12, "slot": "morning", "name": "Fram Museum (Frammuseet)", "category": "museum",
+          "lat": 59.9033, "lng": 10.6993,
+          "alwaysOpen": false, "openDays": ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+          "hours": "1 May–30 Sep: 09:30–18:00 | 1 Oct–30 Apr: 10:00–17:00",
+          "note": "Open every day all year. Polar exploration ship Fram.",
+          "source": "https://frammuseum.no/the-museum/the_museum-opening_hours___prices/"
+        },
+        {
+          "n": 13, "slot": "morning", "name": "Kon-Tiki Museum", "category": "museum",
+          "lat": 59.9035, "lng": 10.6975,
+          "alwaysOpen": false, "openDays": ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+          "hours": "Jun–Aug: 09:30–18:00 | May: 10:00–18:00 | Sep–Apr: 10:00–17:00",
+          "note": "Next door to Fram. Open daily.",
+          "source": "https://www.introducingoslo.com/kon-tiki-museum"
+        },
+        {
+          "slot": "lunch", "name": "Cafe near Bygdøynes", "category": "food",
+          "lat": 59.9035, "lng": 10.6990,
+          "note": "Museum cafes at Fram/Kon-Tiki/Maritime Museum cluster on Bygdøynes.",
+          "source": ""
+        },
+        {
+          "n": 14, "slot": "afternoon", "name": "Vigeland Sculpture Park (Frognerparken)", "category": "park",
+          "lat": 59.9270, "lng": 10.7000,
+          "alwaysOpen": true, "hours": "24/7, 365 days", "free": true,
+          "note": "Always open & free. ~15 min from Bygdøy / central Oslo.",
+          "source": "https://www.visitoslo.com/en/product/?tlp=2983183"
+        },
+        {
+          "slot": "dinner", "name": "Dinner", "category": "food",
+          "lat": 59.9270, "lng": 10.7000, "note": "Near Frogner/Majorstuen after the park, or back to centre.",
+          "source": ""
+        }
+      ]
+    }
+  ],
+  "feasibilitySummary": [
+    "Day 1 should NOT be a Monday — Nasjonalmuseet AND Nobel Peace Center are both closed Mondays year-round (all other Day-1 stops are Monday-fine).",
+    "Royal Palace interior needs pre-booked Ticketmaster tour tickets and only runs 20 Jun–16 Aug 2026; otherwise exterior + 13:30 guard change only.",
+    "MUNCH (to 21:00 Wed–Sun) is the best evening stop; Opera foyer closes 16:00 so by night only its roof walk is available.",
+    "Day 2 is clean in summer: all three Bygdøy museums open daily and the B9 ferry runs Apr–Oct. Confirm trip dates fall in that window.",
+    "Day 1 morning is ambitious (5 stops incl. a 2–3 hr museum) — realistically Nasjonalmuseet OR a deep Nobel visit before lunch, not both."
+  ]
+}

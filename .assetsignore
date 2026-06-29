@@ -2,3 +2,4 @@
 .git/**
 .assetsignore
 wrangler.jsonc
+oslo-stops.source.json
